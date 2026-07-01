@@ -95,7 +95,24 @@
         padding: 0 5%;
       }
       #reasons > .wrap {
+        max-width: 1440px;
         padding: 0 1%;
+      }
+      #reasons .reason-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      @media (max-width: 900px) {
+        #reasons .reason-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      @media (max-width: 560px) {
+        #reasons .reason-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+      #reasons .reason {
+        padding: 40px 24px;
       }
 
       .eyebrow {

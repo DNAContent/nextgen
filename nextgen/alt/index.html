@@ -95,7 +95,24 @@
         padding: 0 5%;
       }
       #reasons > .wrap {
+        max-width: 1440px;
         padding: 0 1%;
+      }
+      #reasons .reason-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      @media (max-width: 900px) {
+        #reasons .reason-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      @media (max-width: 560px) {
+        #reasons .reason-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+      #reasons .reason {
+        padding: 40px 24px;
       }
 
       .eyebrow {
@@ -1925,6 +1942,269 @@
       .disc b {
         color: rgba(255, 255, 255, 0.6);
       }
+
+      /* ============================================================
+         Redesigned sections (alt only) — editorial + data-viz
+         ============================================================ */
+
+      /* -- Editorial index columns (Botanical "Why Now") -- */
+      .edi-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin-top: 56px;
+        border-top: 1px solid var(--text-main-light);
+      }
+      .edi {
+        padding: 32px 32px 8px 0;
+        border-right: 1px solid var(--border-light);
+      }
+      .edi:last-child {
+        border-right: none;
+        padding-right: 0;
+      }
+      .edi + .edi {
+        padding-left: 32px;
+      }
+      .edi-num {
+        font-family: var(--font-mono);
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.16em;
+        color: var(--brand-green);
+      }
+      .edi-h {
+        font-family: var(--font-head);
+        font-size: 22px;
+        font-weight: 700;
+        color: var(--text-main-light);
+        line-height: 1.12;
+        margin: 16px 0 14px;
+      }
+      .edi p {
+        color: var(--text-muted-light);
+        font-size: 15.5px;
+        line-height: 1.62;
+        margin: 0;
+      }
+      .edi .hl {
+        color: var(--brand-plum);
+        font-weight: 600;
+      }
+      .edi .hl-g {
+        color: var(--brand-green);
+        font-weight: 600;
+      }
+      .why-lede .fig {
+        color: var(--brand-plum);
+        font-weight: 700;
+        white-space: nowrap;
+      }
+      @media (max-width: 860px) {
+        .edi-grid {
+          grid-template-columns: 1fr;
+        }
+        .edi {
+          border-right: none;
+          border-bottom: 1px solid var(--border-light);
+          padding: 28px 0 24px;
+        }
+        .edi:last-child {
+          border-bottom: none;
+        }
+        .edi + .edi {
+          padding-left: 0;
+        }
+      }
+
+      /* -- Dual-pathway panels with inline SVG viz -- */
+      .dp-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+        margin-top: 52px;
+      }
+      .dp {
+        background: #fff;
+        border-radius: 16px;
+        padding: 30px 28px;
+        box-shadow:
+          0 1px 2px rgba(24, 20, 40, 0.05),
+          0 14px 34px rgba(24, 20, 40, 0.07);
+        transition:
+          transform 0.5s var(--ease-lux),
+          box-shadow 0.5s var(--ease-lux);
+      }
+      .dp:hover {
+        transform: translateY(-5px);
+        box-shadow:
+          0 1px 2px rgba(24, 20, 40, 0.05),
+          0 26px 50px rgba(88, 70, 156, 0.16);
+      }
+      .dp-viz {
+        height: 76px;
+        margin-bottom: 20px;
+      }
+      .dp-viz svg {
+        display: block;
+        width: 100%;
+        height: 100%;
+        overflow: visible;
+      }
+      .dp-num {
+        font-family: var(--font-mono);
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        color: var(--brand-plum);
+      }
+      .dp-h {
+        font-family: var(--font-head);
+        font-size: 21px;
+        font-weight: 700;
+        margin: 10px 0 12px;
+        color: var(--text-main-light);
+      }
+      .dp p {
+        color: var(--text-muted-light);
+        font-size: 15px;
+        line-height: 1.6;
+        margin: 0;
+      }
+      @media (max-width: 860px) {
+        .dp-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      /* -- Revenue Engine: numbered editorial rows -- */
+      .rv-list {
+        display: grid;
+      }
+      .rv-item {
+        display: grid;
+        grid-template-columns: 40px 1fr;
+        gap: 20px;
+        padding: 22px 0;
+        border-top: 1px solid var(--border-light);
+      }
+      .rv-item:first-child {
+        border-top: none;
+        padding-top: 0;
+      }
+      .rv-n {
+        font-family: var(--font-head);
+        font-size: 24px;
+        font-weight: 700;
+        color: var(--brand-plum-light);
+        line-height: 1.1;
+      }
+      .rv-item p {
+        margin: 0;
+        color: var(--text-muted-light);
+        font-size: 15.5px;
+        line-height: 1.62;
+      }
+      .rv-item p.lead {
+        color: var(--text-main-light);
+        font-size: 17px;
+      }
+      .rv-item .fig {
+        color: var(--brand-plum);
+        font-weight: 700;
+      }
+
+      /* -- Monetization: phase tracker + tradeoff viz (dark) -- */
+      .mz-card {
+        background: var(--bg-dark-elevated);
+        border: 1px solid var(--border-dark);
+        border-radius: 14px;
+        padding: 26px 28px;
+      }
+      .phase-track {
+        display: flex;
+        margin: 2px 0 22px;
+      }
+      .ph {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 9px;
+        position: relative;
+      }
+      .ph::before {
+        content: "";
+        position: absolute;
+        top: 10px;
+        right: 50%;
+        width: 100%;
+        height: 2px;
+        background: var(--border-dark);
+        z-index: 0;
+      }
+      .ph:first-child::before {
+        display: none;
+      }
+      .ph i {
+        width: 22px;
+        height: 22px;
+        border-radius: 50%;
+        border: 2px solid var(--border-dark);
+        background: #100e16;
+        z-index: 1;
+        display: grid;
+        place-items: center;
+        font-style: normal;
+        font-size: 10px;
+        font-weight: 700;
+        color: var(--text-muted-dark);
+      }
+      .ph b {
+        font-family: var(--font-mono);
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: var(--text-muted-dark);
+      }
+      .ph.done i {
+        background: var(--brand-green);
+        border-color: var(--brand-green);
+        color: #0e0d12;
+      }
+      .ph.done::before,
+      .ph.now::before {
+        background: var(--brand-green);
+      }
+      .ph.now i {
+        border-color: var(--brand-green-light);
+        color: var(--brand-green-light);
+        box-shadow: 0 0 0 4px rgba(185, 202, 115, 0.14);
+      }
+      .ph.now b {
+        color: var(--brand-green-light);
+      }
+      .ph.target i {
+        border-style: dashed;
+        border-color: var(--brand-plum-light);
+        color: var(--brand-plum-light);
+      }
+      .ph.target b {
+        color: var(--brand-plum-light);
+      }
+      .mz-win {
+        font-family: var(--font-mono);
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--brand-plum-light);
+        border: 1px dashed rgba(175, 155, 235, 0.5);
+        border-radius: 999px;
+        padding: 4px 12px;
+        display: inline-block;
+        margin-bottom: 16px;
+      }
     </style>
 
     <!-- =====================================================================
@@ -3172,10 +3452,18 @@
             oncology pipeline with a revenue line carrying part of the weight.
           </p>
 
-          <div class="reason-grid" style="margin-top: 48px">
-            <div class="reason reveal magnetic-card">
-              <div class="r-ico" aria-hidden="true">◇</div>
-              <h3>Risk that flattens</h3>
+          <div class="dp-grid">
+            <div class="dp reveal">
+              <div class="dp-viz" aria-hidden="true">
+                <svg viewBox="0 0 200 76" role="img">
+                  <line x1="12" y1="46" x2="188" y2="46" stroke="rgb(97,108,51)" stroke-width="1.5" stroke-dasharray="3 3" opacity="0.75" />
+                  <rect x="48" y="10" width="30" height="54" rx="3" fill="rgb(88,70,156)" />
+                  <rect x="122" y="46" width="30" height="18" rx="3" fill="rgb(175,155,235)" />
+                  <line x1="0" y1="64" x2="200" y2="64" stroke="rgba(24,20,40,0.12)" stroke-width="1" />
+                </svg>
+              </div>
+              <div class="dp-num">01</div>
+              <div class="dp-h">Risk that flattens</div>
               <p>
                 A pure clinical-stage company is worth a great deal if the drug
                 works and roughly nothing if it does not. A revenue-generating
@@ -3183,18 +3471,38 @@
                 drug program is delayed or terminated.
               </p>
             </div>
-            <div class="reason reveal delay-1 magnetic-card">
-              <div class="r-ico" aria-hidden="true">◇</div>
-              <h3>Less dilution over time</h3>
+            <div class="dp reveal delay-1">
+              <div class="dp-viz" aria-hidden="true">
+                <svg viewBox="0 0 200 76" role="img">
+                  <rect x="20" y="14" width="26" height="50" rx="3" fill="rgb(175,155,235)" />
+                  <rect x="66" y="28" width="26" height="36" rx="3" fill="rgb(175,155,235)" opacity="0.78" />
+                  <rect x="112" y="42" width="26" height="22" rx="3" fill="rgb(175,155,235)" opacity="0.56" />
+                  <rect x="158" y="52" width="26" height="12" rx="3" fill="rgb(175,155,235)" opacity="0.4" />
+                  <line x1="0" y1="64" x2="200" y2="64" stroke="rgba(24,20,40,0.12)" stroke-width="1" />
+                </svg>
+              </div>
+              <div class="dp-num">02</div>
+              <div class="dp-h">Less dilution over time</div>
               <p>
                 Operating cash flow reduces dependence on the dilutive
                 milestone-driven financing rounds that pure-play developers rely
                 on, which matters most in tight capital markets.
               </p>
             </div>
-            <div class="reason reveal delay-2 magnetic-card">
-              <div class="r-ico" aria-hidden="true">◇</div>
-              <h3>More ways to win</h3>
+            <div class="dp reveal delay-2">
+              <div class="dp-viz" aria-hidden="true">
+                <svg viewBox="0 0 200 76" role="img">
+                  <path d="M50 38 C 104 38, 108 15, 150 15" fill="none" stroke="rgb(97,108,51)" stroke-width="1.5" />
+                  <path d="M50 38 H 150" fill="none" stroke="rgb(97,108,51)" stroke-width="1.5" />
+                  <path d="M50 38 C 104 38, 108 61, 150 61" fill="none" stroke="rgb(97,108,51)" stroke-width="1.5" />
+                  <circle cx="46" cy="38" r="9" fill="rgb(88,70,156)" />
+                  <circle cx="154" cy="15" r="7" fill="rgb(185,202,115)" />
+                  <circle cx="154" cy="38" r="7" fill="rgb(185,202,115)" />
+                  <circle cx="154" cy="61" r="7" fill="rgb(185,202,115)" />
+                </svg>
+              </div>
+              <div class="dp-num">03</div>
+              <div class="dp-h">More ways to win</div>
               <p>
                 One realistic exit becomes three: license the drug, sell the
                 supplement business to a consumer-health acquirer, or keep
@@ -3417,27 +3725,32 @@
           <div class="sec-head reveal">
             <span class="eyebrow">Why Now</span>
             <h2>Plant-based drugs are re-entering the pipeline.</h2>
-            <p class="lede">
+            <p class="lede why-lede">
               For thirty years the industry chased purely synthetic molecules.
-              It did not deliver: 80–90% of projects still fail before human
-              trials, and 95% of those that reach the clinic fail there. The
-              math is bringing botanical discovery back.
+              It did not deliver: <span class="fig">80–90%</span> of projects
+              still fail before human trials, and <span class="fig">95%</span> of
+              those that reach the clinic fail there. The math is bringing
+              botanical discovery back.
             </p>
           </div>
 
-          <div class="reason-grid" style="margin-top: 12px">
-            <div class="reason reveal magnetic-card">
-              <h3>The drugs you already trust</h3>
+          <div class="edi-grid reveal">
+            <div class="edi">
+              <div class="edi-num">01</div>
+              <div class="edi-h">The drugs you already trust</div>
               <p>
-                Aspirin came from willow bark. Morphine from the opium poppy.
-                Digoxin from foxglove. Taxol, a landmark cancer drug, from the
-                Pacific yew. Vincristine from the Madagascar periwinkle.
-                Artemisinin, a 2015 Nobel Prize in Medicine, from sweet
-                wormwood.
+                <span class="hl">Aspirin</span> came from willow bark.
+                <span class="hl">Morphine</span> from the opium poppy.
+                <span class="hl">Digoxin</span> from foxglove.
+                <span class="hl">Taxol</span>, a landmark cancer drug, from the
+                Pacific yew. <span class="hl">Vincristine</span> from the
+                Madagascar periwinkle. <span class="hl">Artemisinin</span>, a
+                2015 Nobel Prize in Medicine, from sweet wormwood.
               </p>
             </div>
-            <div class="reason reveal delay-1 magnetic-card">
-              <h3>The technology caught up</h3>
+            <div class="edi">
+              <div class="edi-num">02</div>
+              <div class="edi-h">The technology caught up</div>
               <p>
                 Mass spectrometry and NMR can now characterize, quantify, and
                 synthesize the active compounds in a complex plant extract in
@@ -3445,13 +3758,15 @@
                 the mechanism — favors botanical starting points.
               </p>
             </div>
-            <div class="reason reveal delay-2 magnetic-card">
-              <h3>The FDA opened a path</h3>
+            <div class="edi">
+              <div class="edi-num">03</div>
+              <div class="edi-h">The FDA opened a path</div>
               <p>
                 The 2016 Botanical Drug Development Guidance created a regulatory
                 route for plant-derived drugs that does not require isolating a
-                single molecule. Two — Veregen and Mytesi — are already approved,
-                and modern oncology's comfort with combination therapy welcomes
+                single molecule. Two — <span class="hl-g">Veregen</span> and
+                <span class="hl-g">Mytesi</span> — are already approved, and
+                modern oncology's comfort with combination therapy welcomes
                 multi-compound drugs.
               </p>
             </div>
@@ -3849,27 +4164,25 @@
                 display: grid;
                 grid-template-columns: 1fr 1fr;
                 gap: 20px;
-                margin-top: 28px;
+                margin-top: 32px;
               "
             >
-              <div
-                style="
-                  background: var(--bg-dark-elevated);
-                  border: 1px solid var(--border-dark);
-                  border-radius: 12px;
-                  padding: 26px 28px;
-                "
-              >
+              <div class="mz-card">
                 <div
                   style="
                     font-family: var(--font-head);
                     font-size: 18px;
                     font-weight: 700;
                     color: var(--brand-green-light);
-                    margin-bottom: 12px;
+                    margin-bottom: 18px;
                   "
                 >
                   GZ17-6.02 (oral capsule):
+                </div>
+                <div class="phase-track" aria-hidden="true">
+                  <div class="ph done"><i>✓</i><b>1A</b></div>
+                  <div class="ph now"><i></i><b>1B</b></div>
+                  <div class="ph target"><i></i><b>2</b></div>
                 </div>
                 <p style="color: var(--text-muted-dark); margin: 0; line-height: 1.6">
                   Phase 1A is complete, and the program is now in Phase 1B with
@@ -3880,24 +4193,21 @@
                   or a licensing deal.
                 </p>
               </div>
-              <div
-                style="
-                  background: var(--bg-dark-elevated);
-                  border: 1px solid var(--border-dark);
-                  border-radius: 12px;
-                  padding: 26px 28px;
-                "
-              >
+              <div class="mz-card">
                 <div
                   style="
                     font-family: var(--font-head);
                     font-size: 18px;
                     font-weight: 700;
                     color: var(--brand-green-light);
-                    margin-bottom: 12px;
+                    margin-bottom: 18px;
                   "
                 >
                   GZ21T (topical cream):
+                </div>
+                <div class="phase-track" aria-hidden="true">
+                  <div class="ph done"><i>✓</i><b>1A</b></div>
+                  <div class="ph target"><i></i><b>1B</b></div>
                 </div>
                 <p style="color: var(--text-muted-dark); margin: 0; line-height: 1.6">
                   Phase 1A is complete, and Phase 1B for actinic keratosis is
@@ -3909,34 +4219,48 @@
             </div>
 
             <div
+              class="mz-card"
               style="
-                background: var(--bg-dark-elevated);
-                border: 1px solid var(--border-dark);
-                border-radius: 12px;
-                padding: 26px 28px;
                 margin-top: 20px;
+                display: grid;
+                grid-template-columns: 1.55fr 1fr;
+                gap: 32px;
+                align-items: center;
               "
             >
-              <div
-                style="
-                  font-family: var(--font-head);
-                  font-size: 18px;
-                  font-weight: 700;
-                  color: #fff;
-                  margin-bottom: 12px;
-                "
-              >
-                The earlier-versus-later choice:
+              <div>
+                <div
+                  style="
+                    font-family: var(--font-head);
+                    font-size: 18px;
+                    font-weight: 700;
+                    color: #fff;
+                    margin-bottom: 12px;
+                  "
+                >
+                  The earlier-versus-later choice:
+                </div>
+                <p style="color: var(--text-muted-dark); margin: 0; line-height: 1.6">
+                  Every phase we clear takes risk out of the asset, and a
+                  de-risked molecule is worth more to an acquirer. A company with
+                  deeper capital will often pay a premium to step in later in the
+                  race. That gives us and our investors a real decision at each
+                  stage: accept an earlier offer with less risk remaining, or
+                  carry the program one phase further and aim higher. We intend to
+                  weigh each opportunity on its own terms as it arrives.
+                </p>
               </div>
-              <p style="color: var(--text-muted-dark); margin: 0; line-height: 1.6">
-                Every phase we clear takes risk out of the asset, and a
-                de-risked molecule is worth more to an acquirer. A company with
-                deeper capital will often pay a premium to step in later in the
-                race. That gives us and our investors a real decision at each
-                stage: accept an earlier offer with less risk remaining, or carry
-                the program one phase further and aim higher. We intend to weigh
-                each opportunity on its own terms as it arrives.
-              </p>
+              <div class="mz-tradeoff" aria-hidden="true">
+                <svg viewBox="0 0 220 108" role="img">
+                  <line x1="10" y1="90" x2="210" y2="90" stroke="rgba(255,255,255,0.12)" stroke-width="1" />
+                  <line x1="10" y1="14" x2="10" y2="90" stroke="rgba(255,255,255,0.12)" stroke-width="1" />
+                  <path d="M18 22 L 202 78" stroke="rgb(175,155,235)" stroke-width="2.5" fill="none" stroke-linecap="round" />
+                  <path d="M18 78 L 202 22" stroke="rgb(185,202,115)" stroke-width="2.5" fill="none" stroke-linecap="round" />
+                  <circle cx="110" cy="50" r="4" fill="#fff" />
+                  <text x="206" y="20" fill="rgb(185,202,115)" font-family="var(--font-mono)" font-size="9" text-anchor="end" font-weight="700">VALUE</text>
+                  <text x="206" y="88" fill="rgb(175,155,235)" font-family="var(--font-mono)" font-size="9" text-anchor="end" font-weight="700">RISK</text>
+                </svg>
+              </div>
             </div>
 
             <p class="cite" style="margin-top: 20px">
@@ -3962,47 +4286,71 @@
 
           <div class="supp-lead">
             <div class="reveal">
-              <p>
+              <p
+                style="
+                  font-size: 18px;
+                  color: var(--text-main-light);
+                  line-height: 1.6;
+                  margin-bottom: 30px;
+                "
+              >
                 This is where the science meets a paying customer. The line
                 brings in revenue now, carries the company between clinical
                 milestones, and feeds back real demand for the same plant the
                 drug program is built on.
               </p>
-              <p>
-                Selling the black calla lily in the U.S. food supply meant going
-                to the FDA directly. NextGen completed New Dietary Ingredient
-                notifications for both Arum palaestinum and Peganum harmala — a
-                multi-year process involving animal toxicology, manufacturing
-                data, and safety review. By the company's account, it is the
-                only U.S. entity with both cleared.
-              </p>
-              <p>
-                The plant does not grow naturally in Kansas, so the company
-                built six climate-controlled greenhouses in Sterling — ranging
-                from 60×100 to 80×120 ft — and believes it is the only operation
-                growing it at commercial scale anywhere in the U.S. Products sell
-                through Walmart.com and the company's own store.<sup class="fn"
-                  ><a href="#ref3">3</a></sup
-                >
-              </p>
-              <p>
-                The product line — sold under names like
-                <strong style="color: var(--text-main-light)"
-                  >Afaya Plus</strong
-                >
-                and <strong style="color: var(--text-main-light)">Arum-Flex</strong>
-                — targets immune support, glucose regulation, inflammation, and
-                overall vitality, and is protected by two granted U.S. patents
-                (<span style="font-family: var(--font-mono); font-size: 0.85em"
-                  >10,772,347</span
-                >
-                and
-                <span style="font-family: var(--font-mono); font-size: 0.85em"
-                  >11,246,902</span
-                >). Supplements almost never carry patents — most shelves are
-                full of look-alike bottles anyone can copy.
-              </p>
-              <p style="font-size: 13.5px; color: var(--text-muted-light)">
+
+              <div class="rv-list">
+                <div class="rv-item">
+                  <div class="rv-n">01</div>
+                  <p>
+                    Selling the black calla lily in the U.S. food supply meant
+                    going to the FDA directly. NextGen completed New Dietary
+                    Ingredient notifications for both Arum palaestinum and Peganum
+                    harmala — a multi-year process involving animal toxicology,
+                    manufacturing data, and safety review. By the company's
+                    account, it is the
+                    <span class="fig">only U.S. entity with both cleared</span>.
+                  </p>
+                </div>
+                <div class="rv-item">
+                  <div class="rv-n">02</div>
+                  <p>
+                    The plant does not grow naturally in Kansas, so the company
+                    built <span class="fig">six climate-controlled greenhouses</span>
+                    in Sterling — ranging from
+                    <span class="fig">60×100 to 80×120 ft</span> — and believes it
+                    is the only operation growing it at commercial scale anywhere
+                    in the U.S. Products sell through Walmart.com and the company's
+                    own store.<sup class="fn"><a href="#ref3">3</a></sup>
+                  </p>
+                </div>
+                <div class="rv-item">
+                  <div class="rv-n">03</div>
+                  <p>
+                    The product line — sold under names like
+                    <strong style="color: var(--text-main-light)">Afaya Plus</strong>
+                    and
+                    <strong style="color: var(--text-main-light)">Arum-Flex</strong>
+                    — targets immune support, glucose regulation, inflammation,
+                    and overall vitality, and is protected by two granted U.S.
+                    patents
+                    (<span style="font-family: var(--font-mono); font-size: 0.85em">10,772,347</span>
+                    and
+                    <span style="font-family: var(--font-mono); font-size: 0.85em">11,246,902</span>).
+                    Supplements almost never carry patents — most shelves are full
+                    of look-alike bottles anyone can copy.
+                  </p>
+                </div>
+              </div>
+
+              <p
+                style="
+                  font-size: 13.5px;
+                  color: var(--text-muted-light);
+                  margin-top: 24px;
+                "
+              >
                 The two programs run under one corporate umbrella but stay
                 strictly separated by regulation: the drug under the Federal
                 Food, Drug, and Cosmetic Act, the supplement under DSHEA (1994),
