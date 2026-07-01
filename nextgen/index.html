@@ -750,11 +750,45 @@
         border-top: none;
       }
       .press-row {
+        margin-top: 30px;
+        overflow: hidden;
+        width: 100%;
+        -webkit-mask: linear-gradient(
+          90deg,
+          transparent,
+          #000 6%,
+          #000 94%,
+          transparent
+        );
+        mask: linear-gradient(
+          90deg,
+          transparent,
+          #000 6%,
+          #000 94%,
+          transparent
+        );
+      }
+      .press-track {
         display: flex;
-        flex-wrap: wrap;
         align-items: center;
-        justify-content: center;
-        gap: 22px 30px;
+        width: max-content;
+        animation: press-scroll 45s linear infinite;
+      }
+      .press-track:hover {
+        animation-play-state: paused;
+      }
+      @keyframes press-scroll {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(-50%);
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .press-track {
+          animation: none;
+        }
       }
       .press-logo {
         font-family: var(--font-head);
@@ -764,10 +798,11 @@
         white-space: nowrap;
       }
       .press-logo-img {
-        height: 44px;
+        height: 88px;
         width: auto;
-        max-width: 170px;
         object-fit: contain;
+        margin: 0 42px;
+        flex: 0 0 auto;
       }
 
       /* Reasons Grid */
@@ -2978,34 +3013,24 @@
             >As covered by</span
           >
           <div class="press-row">
-            <img class="press-logo-img" src="press/biospace.png" alt="BioSpace" />
-            <img class="press-logo-img" src="press/kmuw.png" alt="KMUW" />
-            <img
-              class="press-logo-img"
-              src="press/hutchinson-news.png"
-              alt="The Hutchinson News"
-            />
-            <img class="press-logo-img" src="press/kwch12.png" alt="KWCH 12" />
-            <img
-              class="press-logo-img"
-              src="press/startup-grind.png"
-              alt="Startup Grind"
-            />
-            <img
-              class="press-logo-img"
-              src="press/healthcare-business-today.png"
-              alt="Healthcare Business Today"
-            />
-            <img
-              class="press-logo-img"
-              src="press/meditech-today.png"
-              alt="Meditech Today"
-            />
-            <img
-              class="press-logo-img"
-              src="press/pharmatech-news.png"
-              alt="PharmaTech News"
-            />
+            <div class="press-track">
+              <img class="press-logo-img" src="press/biospace.png" alt="BioSpace" />
+              <img class="press-logo-img" src="press/kmuw.png" alt="KMUW" />
+              <img class="press-logo-img" src="press/hutchinson-news.png" alt="The Hutchinson News" />
+              <img class="press-logo-img" src="press/kwch12.png" alt="KWCH 12" />
+              <img class="press-logo-img" src="press/startup-grind.png" alt="Startup Grind" />
+              <img class="press-logo-img" src="press/healthcare-business-today.png" alt="Healthcare Business Today" />
+              <img class="press-logo-img" src="press/meditech-today.png" alt="Meditech Today" />
+              <img class="press-logo-img" src="press/pharmatech-news.png" alt="PharmaTech News" />
+              <img class="press-logo-img" src="press/biospace.png" alt="" aria-hidden="true" />
+              <img class="press-logo-img" src="press/kmuw.png" alt="" aria-hidden="true" />
+              <img class="press-logo-img" src="press/hutchinson-news.png" alt="" aria-hidden="true" />
+              <img class="press-logo-img" src="press/kwch12.png" alt="" aria-hidden="true" />
+              <img class="press-logo-img" src="press/startup-grind.png" alt="" aria-hidden="true" />
+              <img class="press-logo-img" src="press/healthcare-business-today.png" alt="" aria-hidden="true" />
+              <img class="press-logo-img" src="press/meditech-today.png" alt="" aria-hidden="true" />
+              <img class="press-logo-img" src="press/pharmatech-news.png" alt="" aria-hidden="true" />
+            </div>
           </div>
         </div>
       </section>
