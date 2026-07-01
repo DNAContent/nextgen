@@ -230,7 +230,7 @@
         width: 95%;
         max-width: 1000px;
         height: 85vh;
-        background: var(--bg-dark-elevated);
+        background: #fff;
         border: 1px solid var(--border-dark);
         border-radius: 16px;
         position: relative;
@@ -246,7 +246,7 @@
         position: absolute;
         top: 15px;
         right: 20px;
-        background: rgba(255, 255, 255, 0.1);
+        background: rgba(0, 0, 0, 0.55);
         border: none;
         color: #fff;
         width: 36px;
@@ -261,7 +261,7 @@
         transition: background 0.2s;
       }
       .modal-close:hover {
-        background: rgba(255, 255, 255, 0.25);
+        background: rgba(0, 0, 0, 0.75);
       }
 
       .ribbon {
@@ -2953,7 +2953,7 @@
         </button>
         <iframe
           id="calendlyFrame"
-          data-src="https://calendly.com/brenden-dna/15min"
+          data-src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3Mw1cohEYzhlAXYr79j7clz4E69AApGzvrWT5gIM7gd7eutML2ThUlrLNrV8UnJfwOc3FJqU9g?gv=true"
           width="100%"
           height="100%"
           frameborder="0"
@@ -2963,7 +2963,9 @@
 
     <div class="sticky-bar" id="stickyBar">
       <a class="btn btn-ghost on-dark book-call" href="#">Book a Call</a>
-      <a class="btn btn-primary" href="https://investinnextgen.com/invest/">Invest Now</a>
+      <a class="btn btn-primary" href="https://investinnextgen.com/invest/"
+        >Invest Now</a
+      >
     </div>
 
     <div class="ribbon">
@@ -2972,7 +2974,12 @@
 
     <header>
       <div class="wrap nav">
-        <a class="brand" href="#top"><img class="brand-logo" src="../nextgen-logo-white.svg" alt="NextGen Scientific" /></a>
+        <a class="brand" href="#top"
+          ><img
+            class="brand-logo"
+            src="../nextgen-logo-white.svg"
+            alt="NextGen Scientific"
+        /></a>
         <nav class="nav-links">
           <a href="#thesis">The Thesis</a>
           <a href="#founder">Founder</a>
@@ -3045,7 +3052,11 @@
             </p>
 
             <div class="hero-cta">
-              <a class="btn btn-primary" href="https://investinnextgen.com/invest/">Invest Now</a>
+              <a
+                class="btn btn-primary"
+                href="https://investinnextgen.com/invest/"
+                >Invest Now</a
+              >
               <button class="btn btn-ghost on-dark book-call">
                 Book a Call
               </button>
@@ -3169,7 +3180,10 @@
                   <span class="k">Offering Closes</span
                   ><span class="v">Dec 31 2026</span>
                 </div>
-                <a class="btn btn-primary" href="https://investinnextgen.com/invest/" style="padding: 12px"
+                <a
+                  class="btn btn-primary"
+                  href="https://investinnextgen.com/invest/"
+                  style="padding: 12px"
                   >Invest</a
                 >
                 <p class="fineprint">
@@ -3277,22 +3291,90 @@
           >
           <div class="press-row">
             <div class="press-track">
-              <img class="press-logo-img" src="../press/biospace.png" alt="BioSpace" />
+              <img
+                class="press-logo-img"
+                src="../press/biospace.png"
+                alt="BioSpace"
+              />
               <img class="press-logo-img" src="../press/kmuw.png" alt="KMUW" />
-              <img class="press-logo-img" src="../press/hutchinson-news.png" alt="The Hutchinson News" />
-              <img class="press-logo-img" src="../press/kwch12.png" alt="KWCH 12" />
-              <img class="press-logo-img" src="../press/startup-grind.png" alt="Startup Grind" />
-              <img class="press-logo-img" src="../press/healthcare-business-today.png" alt="Healthcare Business Today" />
-              <img class="press-logo-img" src="../press/meditech-today.png" alt="Meditech Today" />
-              <img class="press-logo-img" src="../press/pharmatech-news.png" alt="PharmaTech News" />
-              <img class="press-logo-img" src="../press/biospace.png" alt="" aria-hidden="true" />
-              <img class="press-logo-img" src="../press/kmuw.png" alt="" aria-hidden="true" />
-              <img class="press-logo-img" src="../press/hutchinson-news.png" alt="" aria-hidden="true" />
-              <img class="press-logo-img" src="../press/kwch12.png" alt="" aria-hidden="true" />
-              <img class="press-logo-img" src="../press/startup-grind.png" alt="" aria-hidden="true" />
-              <img class="press-logo-img" src="../press/healthcare-business-today.png" alt="" aria-hidden="true" />
-              <img class="press-logo-img" src="../press/meditech-today.png" alt="" aria-hidden="true" />
-              <img class="press-logo-img" src="../press/pharmatech-news.png" alt="" aria-hidden="true" />
+              <img
+                class="press-logo-img"
+                src="../press/hutchinson-news.png"
+                alt="The Hutchinson News"
+              />
+              <img
+                class="press-logo-img"
+                src="../press/kwch12.png"
+                alt="KWCH 12"
+              />
+              <img
+                class="press-logo-img"
+                src="../press/startup-grind.png"
+                alt="Startup Grind"
+              />
+              <img
+                class="press-logo-img"
+                src="../press/healthcare-business-today.png"
+                alt="Healthcare Business Today"
+              />
+              <img
+                class="press-logo-img"
+                src="../press/meditech-today.png"
+                alt="Meditech Today"
+              />
+              <img
+                class="press-logo-img"
+                src="../press/pharmatech-news.png"
+                alt="PharmaTech News"
+              />
+              <img
+                class="press-logo-img"
+                src="../press/biospace.png"
+                alt=""
+                aria-hidden="true"
+              />
+              <img
+                class="press-logo-img"
+                src="../press/kmuw.png"
+                alt=""
+                aria-hidden="true"
+              />
+              <img
+                class="press-logo-img"
+                src="../press/hutchinson-news.png"
+                alt=""
+                aria-hidden="true"
+              />
+              <img
+                class="press-logo-img"
+                src="../press/kwch12.png"
+                alt=""
+                aria-hidden="true"
+              />
+              <img
+                class="press-logo-img"
+                src="../press/startup-grind.png"
+                alt=""
+                aria-hidden="true"
+              />
+              <img
+                class="press-logo-img"
+                src="../press/healthcare-business-today.png"
+                alt=""
+                aria-hidden="true"
+              />
+              <img
+                class="press-logo-img"
+                src="../press/meditech-today.png"
+                alt=""
+                aria-hidden="true"
+              />
+              <img
+                class="press-logo-img"
+                src="../press/pharmatech-news.png"
+                alt=""
+                aria-hidden="true"
+              />
             </div>
           </div>
         </div>
@@ -3391,9 +3473,9 @@
             <p class="lede">
               By the time a cancer has beaten every standard therapy, most
               patients and their families are out of road. Those are the tumors
-              this program goes after, and they are the ones where a single added
-              option can change everything. The need behind them is enormous, and
-              it keeps growing.
+              this program goes after, and they are the ones where a single
+              added option can change everything. The need behind them is
+              enormous, and it keeps growing.
             </p>
           </div>
           <div class="prob-grid">
@@ -3406,7 +3488,11 @@
                 New cancer cases worldwide every year, a figure climbing toward
                 35 million by 2050 as populations grow and age.
               </div>
-              <div class="src">IARC / WHO, GLOBOCAN 2022<sup class="fn"><a href="#ref6">6</a></sup></div>
+              <div class="src">
+                IARC / WHO, GLOBOCAN 2022<sup class="fn"
+                  ><a href="#ref6">6</a></sup
+                >
+              </div>
             </div>
             <div class="prob reveal delay-1">
               <div class="n">
@@ -3417,7 +3503,11 @@
                 Cancer deaths worldwide every year. For several tumor types in
                 this pipeline, survival has barely moved in decades.
               </div>
-              <div class="src">IARC / WHO, GLOBOCAN 2022<sup class="fn"><a href="#ref6">6</a></sup></div>
+              <div class="src">
+                IARC / WHO, GLOBOCAN 2022<sup class="fn"
+                  ><a href="#ref6">6</a></sup
+                >
+              </div>
             </div>
             <div class="prob reveal delay-2">
               <div class="n">
@@ -3429,7 +3519,11 @@
                 $441 billion by 2029. This is a market that pays for therapies
                 able to reach targets others miss.
               </div>
-              <div class="src">IQVIA Institute, Global Use of Medicines 2025<sup class="fn"><a href="#ref7">7</a></sup></div>
+              <div class="src">
+                IQVIA Institute, Global Use of Medicines 2025<sup class="fn"
+                  ><a href="#ref7">7</a></sup
+                >
+              </div>
             </div>
           </div>
           <p
@@ -3445,8 +3539,9 @@
           >
             NextGen starts somewhere unusual. Its lead compound traces back to a
             plant that families near Jerusalem have brewed against illness since
-            the ninth century, carried forward now through modern clinical trials
-            and its uses protected by a patent portfolio that runs to 2038.
+            the ninth century, carried forward now through modern clinical
+            trials and its uses protected by a patent portfolio that runs to
+            2038.
           </p>
         </div>
       </section>
@@ -3493,7 +3588,7 @@
               </p>
               <ul>
                 <li>
-                  Earning roughly $1.7M a year<sup class="fn"
+                  Current annual revenue is $1.7 million<sup class="fn"
                     ><a href="#ref2">2</a></sup
                   >
                 </li>
@@ -3517,20 +3612,50 @@
               color: var(--text-muted-light);
             "
           >
-            The point is simple. A drug program can take years and swing on a
-            single result. A business that already sells product gives this one
-            a <strong>floor under the science</strong>. You get the upside of an
-            oncology pipeline with a revenue line carrying part of the weight.
+            Most early-stage drug plays ask you to bet on the science alone.
+            This one runs <strong>two businesses at once.</strong> One is an
+            oncology pipeline with years of upside ahead. The other sells
+            supplements and generates revenue now. You are backing both.
           </p>
 
           <div class="dp-grid">
             <div class="dp reveal">
               <div class="dp-viz" aria-hidden="true">
                 <svg viewBox="0 0 200 76" role="img">
-                  <line x1="12" y1="46" x2="188" y2="46" stroke="rgb(97,108,51)" stroke-width="1.5" stroke-dasharray="3 3" opacity="0.75" />
-                  <rect x="48" y="10" width="30" height="54" rx="3" fill="rgb(88,70,156)" />
-                  <rect x="122" y="46" width="30" height="18" rx="3" fill="rgb(175,155,235)" />
-                  <line x1="0" y1="64" x2="200" y2="64" stroke="rgba(24,20,40,0.12)" stroke-width="1" />
+                  <line
+                    x1="12"
+                    y1="46"
+                    x2="188"
+                    y2="46"
+                    stroke="rgb(97,108,51)"
+                    stroke-width="1.5"
+                    stroke-dasharray="3 3"
+                    opacity="0.75"
+                  />
+                  <rect
+                    x="48"
+                    y="10"
+                    width="30"
+                    height="54"
+                    rx="3"
+                    fill="rgb(88,70,156)"
+                  />
+                  <rect
+                    x="122"
+                    y="46"
+                    width="30"
+                    height="18"
+                    rx="3"
+                    fill="rgb(175,155,235)"
+                  />
+                  <line
+                    x1="0"
+                    y1="64"
+                    x2="200"
+                    y2="64"
+                    stroke="rgba(24,20,40,0.12)"
+                    stroke-width="1"
+                  />
                 </svg>
               </div>
               <div class="dp-num">01</div>
@@ -3545,11 +3670,49 @@
             <div class="dp reveal delay-1">
               <div class="dp-viz" aria-hidden="true">
                 <svg viewBox="0 0 200 76" role="img">
-                  <rect x="20" y="14" width="26" height="50" rx="3" fill="rgb(175,155,235)" />
-                  <rect x="66" y="28" width="26" height="36" rx="3" fill="rgb(175,155,235)" opacity="0.78" />
-                  <rect x="112" y="42" width="26" height="22" rx="3" fill="rgb(175,155,235)" opacity="0.56" />
-                  <rect x="158" y="52" width="26" height="12" rx="3" fill="rgb(175,155,235)" opacity="0.4" />
-                  <line x1="0" y1="64" x2="200" y2="64" stroke="rgba(24,20,40,0.12)" stroke-width="1" />
+                  <rect
+                    x="20"
+                    y="14"
+                    width="26"
+                    height="50"
+                    rx="3"
+                    fill="rgb(175,155,235)"
+                  />
+                  <rect
+                    x="66"
+                    y="28"
+                    width="26"
+                    height="36"
+                    rx="3"
+                    fill="rgb(175,155,235)"
+                    opacity="0.78"
+                  />
+                  <rect
+                    x="112"
+                    y="42"
+                    width="26"
+                    height="22"
+                    rx="3"
+                    fill="rgb(175,155,235)"
+                    opacity="0.56"
+                  />
+                  <rect
+                    x="158"
+                    y="52"
+                    width="26"
+                    height="12"
+                    rx="3"
+                    fill="rgb(175,155,235)"
+                    opacity="0.4"
+                  />
+                  <line
+                    x1="0"
+                    y1="64"
+                    x2="200"
+                    y2="64"
+                    stroke="rgba(24,20,40,0.12)"
+                    stroke-width="1"
+                  />
                 </svg>
               </div>
               <div class="dp-num">02</div>
@@ -3563,9 +3726,24 @@
             <div class="dp reveal delay-2">
               <div class="dp-viz" aria-hidden="true">
                 <svg viewBox="0 0 200 76" role="img">
-                  <path d="M50 38 C 104 38, 108 15, 150 15" fill="none" stroke="rgb(97,108,51)" stroke-width="1.5" />
-                  <path d="M50 38 H 150" fill="none" stroke="rgb(97,108,51)" stroke-width="1.5" />
-                  <path d="M50 38 C 104 38, 108 61, 150 61" fill="none" stroke="rgb(97,108,51)" stroke-width="1.5" />
+                  <path
+                    d="M50 38 C 104 38, 108 15, 150 15"
+                    fill="none"
+                    stroke="rgb(97,108,51)"
+                    stroke-width="1.5"
+                  />
+                  <path
+                    d="M50 38 H 150"
+                    fill="none"
+                    stroke="rgb(97,108,51)"
+                    stroke-width="1.5"
+                  />
+                  <path
+                    d="M50 38 C 104 38, 108 61, 150 61"
+                    fill="none"
+                    stroke="rgb(97,108,51)"
+                    stroke-width="1.5"
+                  />
                   <circle cx="46" cy="38" r="9" fill="rgb(88,70,156)" />
                   <circle cx="154" cy="15" r="7" fill="rgb(185,202,115)" />
                   <circle cx="154" cy="38" r="7" fill="rgb(185,202,115)" />
@@ -3712,9 +3890,9 @@
               <div class="tl-year">2005</div>
               <div class="tl-title">A trip home to the Holy Land</div>
               <div class="tl-desc">
-                Back near Jerusalem, he sees families still using the black calla
-                lily his mother used, and asks the chemist's question: what is
-                actually in it?
+                Back near Jerusalem, he sees families still using the black
+                calla lily his mother used, and asks the chemist's question:
+                what is actually in it?
               </div>
             </div>
             <div class="tl-item reveal">
@@ -3742,8 +3920,8 @@
               <div class="tl-year">c. 2015</div>
               <div class="tl-title">Hyatt Life Sciences begins</div>
               <div class="tl-desc">
-                Local demand for the plant outpaces research supply — the team is
-                soon brewing dozens of gallons a week — and the patented
+                Local demand for the plant outpaces research supply — the team
+                is soon brewing dozens of gallons a week — and the patented
                 supplement line is formed.
               </div>
             </div>
@@ -3799,9 +3977,9 @@
             <p class="lede why-lede">
               For thirty years the industry chased purely synthetic molecules.
               It did not deliver: <span class="fig">80–90%</span> of projects
-              still fail before human trials, and <span class="fig">95%</span> of
-              those that reach the clinic fail there. The math is bringing
-              botanical discovery back.
+              still fail before human trials, and
+              <span class="fig">95%</span> of those that reach the clinic fail
+              there. The math is bringing botanical discovery back.
             </p>
           </div>
 
@@ -3833,9 +4011,10 @@
               <div class="edi-num">03</div>
               <div class="edi-h">The FDA opened a path</div>
               <p>
-                The 2016 Botanical Drug Development Guidance created a regulatory
-                route for plant-derived drugs that does not require isolating a
-                single molecule. Two — <span class="hl-g">Veregen</span> and
+                The 2016 Botanical Drug Development Guidance created a
+                regulatory route for plant-derived drugs that does not require
+                isolating a single molecule. Two —
+                <span class="hl-g">Veregen</span> and
                 <span class="hl-g">Mytesi</span> — are already approved, and
                 modern oncology's comfort with combination therapy welcomes
                 multi-compound drugs.
@@ -3873,13 +4052,13 @@
               </p>
               <p>
                 <strong style="color: var(--text-main-light)">GZ17-6.02</strong>
-                is an oral capsule. Genzada has taken it into human trials across
-                multiple tumor types, working with academic and contract research
-                partners.
+                is an oral capsule. Genzada has taken it into human trials
+                across multiple tumor types, working with academic and contract
+                research partners.
               </p>
               <p>
-                <strong style="color: var(--text-main-light)">GZ21T</strong> is a
-                topical cream. It is being developed for actinic keratosis, a
+                <strong style="color: var(--text-main-light)">GZ21T</strong> is
+                a topical cream. It is being developed for actinic keratosis, a
                 precancerous skin condition, along with related disorders that
                 current options treat poorly.
               </p>
@@ -3911,7 +4090,9 @@
         <div class="wrap">
           <div class="sec-head reveal">
             <span class="eyebrow on-dark">The Mechanism</span>
-            <h2>Most cancer drugs unscrew lightbulbs. This one flips the breaker.</h2>
+            <h2>
+              Most cancer drugs unscrew lightbulbs. This one flips the breaker.
+            </h2>
             <p class="lede">
               Picture a house with hundreds of lights. You could climb a ladder
               in every room and unscrew each bulb — or walk to the basement and
@@ -3919,7 +4100,14 @@
             </p>
           </div>
 
-          <div class="founder-grid" style="grid-template-columns: 1fr 1fr; align-items: start; gap: 48px">
+          <div
+            class="founder-grid"
+            style="
+              grid-template-columns: 1fr 1fr;
+              align-items: start;
+              gap: 48px;
+            "
+          >
             <div class="founder-body reveal">
               <p>
                 Most cancer drugs work like the ladder: they target one specific
@@ -3937,10 +4125,18 @@
                 (glioblastoma), and skin. Cut the signal at the source, and
                 everything downstream feels it.
               </p>
-              <p style="font-size: 13.5px; color: var(--text-muted-dark); border-top: 1px solid var(--border-dark); padding-top: 16px; margin-top: 24px">
-                GZ17-6.02 is investigational and has not been approved by the FDA
-                for any use. Mechanism described from peer-reviewed and company
-                sources; early results do not guarantee later outcomes.
+              <p
+                style="
+                  font-size: 13.5px;
+                  color: var(--text-muted-dark);
+                  border-top: 1px solid var(--border-dark);
+                  padding-top: 16px;
+                  margin-top: 24px;
+                "
+              >
+                GZ17-6.02 is investigational and has not been approved by the
+                FDA for any use. Mechanism described from peer-reviewed and
+                company sources; early results do not guarantee later outcomes.
               </p>
             </div>
             <div style="display: grid; grid-template-columns: 1fr; gap: 20px">
@@ -4172,7 +4368,13 @@
 
           <div class="readout reveal" style="margin-top: 40px">
             <h3>Already past the "valley of death"</h3>
-            <p style="color: var(--text-muted-dark); max-width: 70ch; margin: 8px 0 28px">
+            <p
+              style="
+                color: var(--text-muted-dark);
+                max-width: 70ch;
+                margin: 8px 0 28px;
+              "
+            >
               Most drug candidates die in the stretch between lab research and
               the first human trial — the industry calls it the valley of death.
               GZ17-6.02 has already crossed it.
@@ -4204,7 +4406,8 @@
               enrolling Phase 1B at a major U.S. cancer center — each step
               eliminates candidates that could not survive contact with reality.
               Failure-rate figures per the National Institutes of Health;
-              timeline per Springer Translational Medicine Communications (2019).
+              timeline per Springer Translational Medicine Communications
+              (2019).
             </p>
           </div>
 
@@ -4237,10 +4440,11 @@
               "
             >
               We are advancing two assets, and we believe each one offers more
-              than a single way to return value to shareholders. Our intention is
-              to take each program to a point where a larger pharmaceutical
-              partner carries it forward, then license or sell. We do not plan to
-              push either drug all the way to a new drug application ourselves.
+              than a single way to return value to shareholders. Our intention
+              is to take each program to a point where a larger pharmaceutical
+              partner carries it forward, then license or sell. We do not plan
+              to push either drug all the way to a new drug application
+              ourselves.
             </p>
 
             <div
@@ -4268,13 +4472,19 @@
                   <div class="ph now"><i></i><b>1B</b></div>
                   <div class="ph target"><i></i><b>2</b></div>
                 </div>
-                <p style="color: var(--text-muted-dark); margin: 0; line-height: 1.6">
+                <p
+                  style="
+                    color: var(--text-muted-dark);
+                    margin: 0;
+                    line-height: 1.6;
+                  "
+                >
                   Phase 1A is complete, and the program is now in Phase 1B with
                   late-stage prostate patients in Virginia. We believe Phase 2
                   data is the point where 6.02 becomes most valuable to a buyer.
                   Drug developers often wait for Phase 2 results before they
-                  commit, which is why we intend to target that window for a sale
-                  or a licensing deal.
+                  commit, which is why we intend to target that window for a
+                  sale or a licensing deal.
                 </p>
               </div>
               <div class="mz-card">
@@ -4293,7 +4503,13 @@
                   <div class="ph done"><i>✓</i><b>1A</b></div>
                   <div class="ph target"><i></i><b>1B</b></div>
                 </div>
-                <p style="color: var(--text-muted-dark); margin: 0; line-height: 1.6">
+                <p
+                  style="
+                    color: var(--text-muted-dark);
+                    margin: 0;
+                    line-height: 1.6;
+                  "
+                >
                   Phase 1A is complete, and Phase 1B for actinic keratosis is
                   about to begin in Sweden and the Netherlands. We believe 21T
                   could reach a licensing or sale conversation sooner than 6.02,
@@ -4324,25 +4540,78 @@
                 >
                   The earlier-versus-later choice:
                 </div>
-                <p style="color: var(--text-muted-dark); margin: 0; line-height: 1.6">
+                <p
+                  style="
+                    color: var(--text-muted-dark);
+                    margin: 0;
+                    line-height: 1.6;
+                  "
+                >
                   Every phase we clear takes risk out of the asset, and a
-                  de-risked molecule is worth more to an acquirer. A company with
-                  deeper capital will often pay a premium to step in later in the
-                  race. That gives us and our investors a real decision at each
-                  stage: accept an earlier offer with less risk remaining, or
-                  carry the program one phase further and aim higher. We intend to
-                  weigh each opportunity on its own terms as it arrives.
+                  de-risked molecule is worth more to an acquirer. A company
+                  with deeper capital will often pay a premium to step in later
+                  in the race. That gives us and our investors a real decision
+                  at each stage: accept an earlier offer with less risk
+                  remaining, or carry the program one phase further and aim
+                  higher. We intend to weigh each opportunity on its own terms
+                  as it arrives.
                 </p>
               </div>
               <div class="mz-tradeoff" aria-hidden="true">
                 <svg viewBox="0 0 220 108" role="img">
-                  <line x1="10" y1="90" x2="210" y2="90" stroke="rgba(255,255,255,0.12)" stroke-width="1" />
-                  <line x1="10" y1="14" x2="10" y2="90" stroke="rgba(255,255,255,0.12)" stroke-width="1" />
-                  <path d="M18 22 L 202 78" stroke="rgb(175,155,235)" stroke-width="1.5" fill="none" stroke-linecap="round" />
-                  <path d="M18 78 L 202 22" stroke="rgb(185,202,115)" stroke-width="1.5" fill="none" stroke-linecap="round" />
+                  <line
+                    x1="10"
+                    y1="90"
+                    x2="210"
+                    y2="90"
+                    stroke="rgba(255,255,255,0.12)"
+                    stroke-width="1"
+                  />
+                  <line
+                    x1="10"
+                    y1="14"
+                    x2="10"
+                    y2="90"
+                    stroke="rgba(255,255,255,0.12)"
+                    stroke-width="1"
+                  />
+                  <path
+                    d="M18 22 L 202 78"
+                    stroke="rgb(175,155,235)"
+                    stroke-width="1.5"
+                    fill="none"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M18 78 L 202 22"
+                    stroke="rgb(185,202,115)"
+                    stroke-width="1.5"
+                    fill="none"
+                    stroke-linecap="round"
+                  />
                   <circle cx="110" cy="50" r="4" fill="#fff" />
-                  <text x="206" y="20" fill="rgb(185,202,115)" font-family="var(--font-mono)" font-size="9" text-anchor="end" font-weight="700">VALUE</text>
-                  <text x="206" y="88" fill="rgb(175,155,235)" font-family="var(--font-mono)" font-size="9" text-anchor="end" font-weight="700">RISK</text>
+                  <text
+                    x="206"
+                    y="20"
+                    fill="rgb(185,202,115)"
+                    font-family="var(--font-mono)"
+                    font-size="9"
+                    text-anchor="end"
+                    font-weight="700"
+                  >
+                    VALUE
+                  </text>
+                  <text
+                    x="206"
+                    y="88"
+                    fill="rgb(175,155,235)"
+                    font-family="var(--font-mono)"
+                    font-size="9"
+                    text-anchor="end"
+                    font-weight="700"
+                  >
+                    RISK
+                  </text>
                 </svg>
               </div>
             </div>
@@ -4390,10 +4659,10 @@
                   <p>
                     Selling the black calla lily in the U.S. food supply meant
                     going to the FDA directly. NextGen completed New Dietary
-                    Ingredient notifications for both Arum palaestinum and Peganum
-                    harmala — a multi-year process involving animal toxicology,
-                    manufacturing data, and safety review. By the company's
-                    account, it is the
+                    Ingredient notifications for both Arum palaestinum and
+                    Peganum harmala — a multi-year process involving animal
+                    toxicology, manufacturing data, and safety review. By the
+                    company's account, it is the
                     <span class="fig">only U.S. entity with both cleared</span>.
                   </p>
                 </div>
@@ -4401,29 +4670,40 @@
                   <div class="rv-n">02</div>
                   <p>
                     The plant does not grow naturally in Kansas, so the company
-                    built <span class="fig">six climate-controlled greenhouses</span>
+                    built
+                    <span class="fig">six climate-controlled greenhouses</span>
                     in Sterling — ranging from
-                    <span class="fig">60×100 to 80×120 ft</span> — and believes it
-                    is the only operation growing it at commercial scale anywhere
-                    in the U.S. Products sell through Walmart.com and the company's
-                    own store.<sup class="fn"><a href="#ref3">3</a></sup>
+                    <span class="fig">60×100 to 80×120 ft</span> — and believes
+                    it is the only operation growing it at commercial scale
+                    anywhere in the U.S. Products sell through Walmart.com and
+                    the company's own store.<sup class="fn"
+                      ><a href="#ref3">3</a></sup
+                    >
                   </p>
                 </div>
                 <div class="rv-item">
                   <div class="rv-n">03</div>
                   <p>
                     The product line — sold under names like
-                    <strong style="color: var(--text-main-light)">Afaya Plus</strong>
+                    <strong style="color: var(--text-main-light)"
+                      >Afaya Plus</strong
+                    >
                     and
-                    <strong style="color: var(--text-main-light)">Arum-Flex</strong>
+                    <strong style="color: var(--text-main-light)"
+                      >Arum-Flex</strong
+                    >
                     — targets immune support, glucose regulation, inflammation,
                     and overall vitality, and is protected by two granted U.S.
-                    patents
-                    (<span style="font-family: var(--font-mono); font-size: 0.85em">10,772,347</span>
+                    patents (<span
+                      style="font-family: var(--font-mono); font-size: 0.85em"
+                      >10,772,347</span
+                    >
                     and
-                    <span style="font-family: var(--font-mono); font-size: 0.85em">11,246,902</span>).
-                    Supplements almost never carry patents — most shelves are full
-                    of look-alike bottles anyone can copy.
+                    <span
+                      style="font-family: var(--font-mono); font-size: 0.85em"
+                      >11,246,902</span
+                    >). Supplements almost never carry patents — most shelves
+                    are full of look-alike bottles anyone can copy.
                   </p>
                 </div>
               </div>
@@ -4791,7 +5071,15 @@
               <div class="d">
                 The global natural-supplement market Hyatt already sells into,
                 growing for the next decade.
-                <span style="display: block; margin-top: 8px; opacity: 0.6; font-size: 0.85em">Precedence Research</span>
+                <span
+                  style="
+                    display: block;
+                    margin-top: 8px;
+                    opacity: 0.6;
+                    font-size: 0.85em;
+                  "
+                  >Precedence Research</span
+                >
               </div>
             </div>
 
@@ -4821,7 +5109,15 @@
                 The cancer and carcinoma segments GZ17-6.02 targets, projected
                 by 2035. Global oncology spend alone runs from ~$192B (2025) to
                 over $400B by 2035.
-                <span style="display: block; margin-top: 8px; opacity: 0.6; font-size: 0.85em">Nova One Advisor</span>
+                <span
+                  style="
+                    display: block;
+                    margin-top: 8px;
+                    opacity: 0.6;
+                    font-size: 0.85em;
+                  "
+                  >Nova One Advisor</span
+                >
               </div>
             </div>
           </div>
@@ -4840,7 +5136,16 @@
             155M people whose conditions trace back to chronic inflammation — a
             market the supplement line's glucose- and inflammation-support
             formulations are built to address.
-            <span style="display: block; margin-top: 8px; opacity: 0.55; font-size: 0.8em">CDC National Diabetes Statistics Report. Supplements are not intended to diagnose, treat, cure, or prevent any disease.</span>
+            <span
+              style="
+                display: block;
+                margin-top: 8px;
+                opacity: 0.55;
+                font-size: 0.8em;
+              "
+              >CDC National Diabetes Statistics Report. Supplements are not
+              intended to diagnose, treat, cure, or prevent any disease.</span
+            >
           </p>
         </div>
       </section>
@@ -4873,8 +5178,8 @@
               <h3>Sell the supplement business</h3>
               <p>
                 Hyatt — patented, FDA-cleared ingredients, retail distribution,
-                revenue today — is a stand-alone asset a consumer-health acquirer
-                could buy independent of the drug's outcome.
+                revenue today — is a stand-alone asset a consumer-health
+                acquirer could buy independent of the drug's outcome.
               </p>
             </div>
             <div
@@ -5395,9 +5700,9 @@
                   <p>
                     Yes. NextGen Scientific accepts investments from
                     self-directed IRAs (SDIRAs) and certain self-directed 401(k)
-                    plans. The investment is made by your retirement account, not
-                    by you personally, with shares held by your custodian on your
-                    behalf.
+                    plans. The investment is made by your retirement account,
+                    not by you personally, with shares held by your custodian on
+                    your behalf.
                   </p>
                   <p>
                     Investing through a retirement account offers several
@@ -5411,8 +5716,8 @@
                       >
                       Private placements like this one are typically held for
                       several years before any liquidity event. Holding shares
-                      inside a Traditional IRA or 401(k) lets returns compound on
-                      a tax-deferred basis until you take distributions in
+                      inside a Traditional IRA or 401(k) lets returns compound
+                      on a tax-deferred basis until you take distributions in
                       retirement. A Roth IRA or Roth 401(k) provides tax-free
                       growth on qualified withdrawals.
                     </li>
@@ -5421,10 +5726,10 @@
                         >Diversification beyond public markets.</strong
                       >
                       Most retirement accounts are concentrated in publicly
-                      traded stocks, bonds, and mutual funds. A private placement
-                      gives your retirement portfolio exposure to early-stage
-                      healthcare development that does not move in lockstep with
-                      public market cycles.
+                      traded stocks, bonds, and mutual funds. A private
+                      placement gives your retirement portfolio exposure to
+                      early-stage healthcare development that does not move in
+                      lockstep with public market cycles.
                     </li>
                     <li>
                       <strong style="color: var(--text-main-light)"
@@ -5441,10 +5746,10 @@
                     To invest through a retirement account, you will need a
                     self-directed IRA custodian (such as Equity Trust, Alto, or
                     STRATA Trust Company). Texture Capital, our broker-dealer,
-                    works with custodians familiar with this process and can help
-                    guide you through the steps. Speak with your tax advisor
-                    about whether this approach fits your retirement plan and
-                    overall financial circumstances.
+                    works with custodians familiar with this process and can
+                    help guide you through the steps. Speak with your tax
+                    advisor about whether this approach fits your retirement
+                    plan and overall financial circumstances.
                   </p>
                 </div>
               </div>
@@ -5462,30 +5767,30 @@
                     NextGen's founder and chief scientist, Gene Zaid, was born
                     just outside Jerusalem and grew up watching family members
                     use the black calla lily, scientifically known as
-                    <em>Arum palaestinum</em>, as a traditional remedy. The plant
-                    has been documented in Middle Eastern medical literature
-                    since the 9th century AD.
+                    <em>Arum palaestinum</em>, as a traditional remedy. The
+                    plant has been documented in Middle Eastern medical
+                    literature since the 9th century AD.
                   </p>
                   <p>
                     Zaid moved to the United States in 1969, eventually built a
-                    chemistry company called Jacam Chemicals in Sterling, Kansas,
-                    and sold it to CES Energy Solutions in 2013 for ~$300
-                    million. He used the proceeds to do what he had been thinking
-                    about for decades: apply modern medicinal chemistry to a
-                    plant his family had trusted for generations.
+                    chemistry company called Jacam Chemicals in Sterling,
+                    Kansas, and sold it to CES Energy Solutions in 2013 for
+                    ~$300 million. He used the proceeds to do what he had been
+                    thinking about for decades: apply modern medicinal chemistry
+                    to a plant his family had trusted for generations.
                   </p>
                   <p>
-                    Selling the black calla lily in the U.S. food supply required
-                    engaging directly with the FDA. NextGen completed New Dietary
-                    Ingredient notifications for both <em>Arum palaestinum</em>
-                    and <em>Peganum harmala</em>, a multi-year regulatory process
-                    involving safety studies and data submission. To the
-                    company's knowledge, it is the only entity in the United
-                    States with both notifications cleared.
+                    Selling the black calla lily in the U.S. food supply
+                    required engaging directly with the FDA. NextGen completed
+                    New Dietary Ingredient notifications for both
+                    <em>Arum palaestinum</em> and <em>Peganum harmala</em>, a
+                    multi-year regulatory process involving safety studies and
+                    data submission. To the company's knowledge, it is the only
+                    entity in the United States with both notifications cleared.
                   </p>
                   <p>
-                    Today, NextGen grows the plant in six greenhouses in the same
-                    small-town Kansas community where Jacam was built, and
+                    Today, NextGen grows the plant in six greenhouses in the
+                    same small-town Kansas community where Jacam was built, and
                     operates its drug and supplement programs from there.
                   </p>
                 </div>
@@ -5508,12 +5813,12 @@
                   </p>
                   <p>
                     One non-small cell lung cancer patient saw measurable tumor
-                    shrinkage. Several other patients experienced stable disease,
-                    which in late-stage cancer is considered a meaningful
-                    clinical result. Company data indicates tumor regression of
-                    up to 34 percent in some cases and a 23.5 percent overall
-                    clinical benefit rate, compared with 15 to 20 percent for
-                    currently available treatments.
+                    shrinkage. Several other patients experienced stable
+                    disease, which in late-stage cancer is considered a
+                    meaningful clinical result. Company data indicates tumor
+                    regression of up to 34 percent in some cases and a 23.5
+                    percent overall clinical benefit rate, compared with 15 to
+                    20 percent for currently available treatments.
                   </p>
                   <p>
                     GZ17-6.02 completed FDA Phase 1 with zero serious adverse
@@ -5550,8 +5855,8 @@
                   </p>
                   <p>
                     The supplement business is patented, FDA-cleared for its key
-                    ingredients, and already distributed through both Walmart.com
-                    and the company's own e-commerce site.
+                    ingredients, and already distributed through both
+                    Walmart.com and the company's own e-commerce site.
                   </p>
                 </div>
               </div>
@@ -5566,8 +5871,8 @@
                   <p>
                     Gene Zaid founded Jacam Chemical in his garage in Sterling,
                     Kansas in 1982. Jason West joined as president in 2009 and
-                    led the company through 430 percent revenue growth before its
-                    sale to CES Energy Solutions in 2013 for ~$300 million.
+                    led the company through 430 percent revenue growth before
+                    its sale to CES Energy Solutions in 2013 for ~$300 million.
                   </p>
                   <p>
                     The same two people are now driving NextGen. They bring
@@ -5578,10 +5883,10 @@
                   <p>
                     The team's pharmaceutical capabilities are reinforced by
                     Stefan Proniuk, PhD, MBA, Chief Science Officer with
-                    leadership roles previously at Neuraptive, Arno Therapeutics,
-                    Neurocrine Biosciences, and Cima Labs, and by Cameron West,
-                    MD, MBA, COO and practicing dermatologist trained at the
-                    University of Kansas School of Medicine.
+                    leadership roles previously at Neuraptive, Arno
+                    Therapeutics, Neurocrine Biosciences, and Cima Labs, and by
+                    Cameron West, MD, MBA, COO and practicing dermatologist
+                    trained at the University of Kansas School of Medicine.
                   </p>
                 </div>
               </div>
@@ -5604,7 +5909,9 @@
                       48 percent to GZ17-6.02 research and preclinical work for
                       the cancer program
                     </li>
-                    <li>20 percent to research on the topical GZ21T compound</li>
+                    <li>
+                      20 percent to research on the topical GZ21T compound
+                    </li>
                     <li>13 percent to new pipeline development</li>
                     <li>9 percent to manufacturing capacity</li>
                     <li>
@@ -5782,7 +6089,12 @@
     <footer>
       <div class="foot-top">
         <div>
-          <a class="brand" href="#top"><img class="brand-logo" src="../nextgen-logo-white.svg" alt="NextGen Scientific" /></a>
+          <a class="brand" href="#top"
+            ><img
+              class="brand-logo"
+              src="../nextgen-logo-white.svg"
+              alt="NextGen Scientific"
+          /></a>
           <p style="margin-top: 16px; max-width: 38ch">
             A drug pipeline and a revenue-generating supplement business, built
             around the black calla lily by Dr. Gene Zaid.
@@ -5823,7 +6135,9 @@
           >
             Book a Call
           </button>
-          <a href="../NextGen-PPM.pdf" target="_blank" rel="noopener">Download the PPM</a>
+          <a href="../NextGen-PPM.pdf" target="_blank" rel="noopener"
+            >Download the PPM</a
+          >
         </div>
       </div>
 
@@ -5857,8 +6171,8 @@
           </li>
           <li id="ref6">
             Global cancer incidence (20 million new cases a year, climbing
-            toward 35 million by 2050) and mortality (9.7 million deaths a year):
-            IARC / WHO, GLOBOCAN 2022 —
+            toward 35 million by 2050) and mortality (9.7 million deaths a
+            year): IARC / WHO, GLOBOCAN 2022 —
             <a
               href="https://www.researchgate.net/publication/379571386_Global_cancer_statistics_2022_GLOBOCAN_estimates_of_incidence_and_mortality_worldwide_for_36_cancers_in_185_countries"
               target="_blank"
