@@ -94,6 +94,9 @@
         margin: 0 auto;
         padding: 0 5%;
       }
+      #reasons > .wrap {
+        padding: 0 1%;
+      }
 
       .eyebrow {
         font-family: var(--font-mono);
@@ -1611,7 +1614,6 @@
         display: block;
         width: 100%;
         height: auto;
-        transform: rotate(-90deg);
       }
       .donut .track {
         fill: none;
@@ -1626,22 +1628,20 @@
       .donut .d-mid {
         fill: #fff;
         font-family: var(--font-head);
-        font-size: 36px;
+        font-size: 34px;
         font-weight: 700;
         text-anchor: middle;
         dominant-baseline: middle;
-        transform: rotate(90deg) translate(100px, -90px);
       }
       .donut .d-sub {
         fill: var(--text-muted-dark);
         font-family: var(--font-body);
-        font-size: 10px;
+        font-size: 9px;
         font-weight: 600;
-        letter-spacing: 0.1em;
+        letter-spacing: 0.08em;
         text-transform: uppercase;
         text-anchor: middle;
         dominant-baseline: middle;
-        transform: rotate(90deg) translate(100px, -115px);
       }
       .uop-chart .legend {
         list-style: none;
@@ -1693,7 +1693,7 @@
         background: none;
         border: 0;
         cursor: pointer;
-        padding: 24px 0;
+        padding: 24px 28px;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -1718,10 +1718,64 @@
         transition: max-height 0.3s ease;
       }
       .faq-a-inner {
-        padding: 0 0 30px;
+        padding: 4px 28px 30px;
         color: var(--text-muted-light);
         font-size: 16px;
-        max-width: 800px;
+        line-height: 1.65;
+        max-width: 820px;
+      }
+      .faq-a-inner p {
+        margin: 0 0 14px;
+      }
+      .faq-a-inner p:last-child {
+        margin-bottom: 0;
+      }
+      .faq-a-inner ul {
+        margin: 0 0 14px;
+        padding-left: 20px;
+      }
+      .faq-a-inner li {
+        margin-bottom: 8px;
+      }
+      .faq-a-inner li:last-child {
+        margin-bottom: 0;
+      }
+
+      /* FAQ tab toggle (Investor / Company) */
+      .faq-toggle {
+        display: inline-flex;
+        gap: 4px;
+        margin-top: 34px;
+        padding: 5px;
+        background: var(--bg-light-elevated);
+        border: 1px solid var(--border-light);
+        border-radius: 999px;
+      }
+      .faq-tab {
+        border: 0;
+        background: none;
+        cursor: pointer;
+        padding: 10px 26px;
+        border-radius: 999px;
+        font-family: var(--font-mono);
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--text-muted-light);
+        transition:
+          color 0.3s ease,
+          background 0.3s ease;
+      }
+      .faq-tab:hover {
+        color: var(--text-main-light);
+      }
+      .faq-tab.active {
+        background: var(--brand-plum);
+        color: #fff;
+      }
+      .faq-panel[hidden] {
+        display: none;
       }
 
       /* Webinar */
@@ -3284,8 +3338,11 @@
             <div
               class="portrait reveal"
               style="
-                background-image: url(&quot;opportunity-flower.webp&quot;);
+                background-image: url(&quot;science-lily.png&quot;);
+                background-size: contain;
+                background-repeat: no-repeat;
                 background-position: center;
+                background-color: #14111d;
                 filter: none;
               "
             ></div>
@@ -4118,7 +4175,7 @@
                 aria-label="Use of proceeds: 48% lead cancer program, 20% topical compound, 13% new pipeline, 9% manufacturing, 5% supplement marketing, 5% general and administrative"
               >
                 <circle class="track" cx="100" cy="100" r="80"></circle>
-                <g transform="rotate(-90 100 100)">
+                <g transform="rotate(-180 100 100)">
                   <circle
                     class="seg"
                     cx="100"
@@ -4174,8 +4231,8 @@
                     stroke-dashoffset="-477.52"
                   ></circle>
                 </g>
-                <text x="100" y="95" class="d-mid">~$10M</text>
-                <text x="100" y="116" class="d-sub">maximum offering</text>
+                <text x="100" y="93" class="d-mid">~$10M</text>
+                <text x="100" y="117" class="d-sub">maximum offering</text>
               </svg>
             </div>
             <ul class="legend">
@@ -4254,7 +4311,29 @@
             <span class="eyebrow">Questions</span>
             <h2>FAQs.</h2>
           </div>
-          <div class="faq-list reveal">
+          <div
+            class="faq-toggle reveal"
+            role="tablist"
+            aria-label="FAQ categories"
+          >
+            <button
+              class="faq-tab active"
+              data-tab="investor"
+              role="tab"
+              aria-selected="true"
+            >
+              Investor
+            </button>
+            <button
+              class="faq-tab"
+              data-tab="company"
+              role="tab"
+              aria-selected="false"
+            >
+              Company
+            </button>
+          </div>
+          <div class="faq-list faq-panel reveal" data-panel="investor">
             <div class="faq-item">
               <button class="faq-q">
                 Who can invest?<span class="pm">+</span>
@@ -4398,13 +4477,234 @@
               </button>
               <div class="faq-a">
                 <div class="faq-a-inner">
-                  Yes. NextGen accepts investments from self-directed IRAs and
-                  certain self-directed 401(k) plans, with units held by your
-                  custodian. The long, illiquid horizon of a private placement
-                  tends to fit a retirement account well. You will need a
-                  self-directed IRA custodian, and Texture Capital can help with
-                  the steps. Check with your tax advisor on whether it suits
-                  your situation.
+                  <p>
+                    Yes. NextGen Scientific accepts investments from
+                    self-directed IRAs (SDIRAs) and certain self-directed 401(k)
+                    plans. The investment is made by your retirement account, not
+                    by you personally, with shares held by your custodian on your
+                    behalf.
+                  </p>
+                  <p>
+                    Investing through a retirement account offers several
+                    practical advantages:
+                  </p>
+                  <ul>
+                    <li>
+                      <strong style="color: var(--text-main-light)"
+                        >Tax treatment that matches the investment
+                        timeline.</strong
+                      >
+                      Private placements like this one are typically held for
+                      several years before any liquidity event. Holding shares
+                      inside a Traditional IRA or 401(k) lets returns compound on
+                      a tax-deferred basis until you take distributions in
+                      retirement. A Roth IRA or Roth 401(k) provides tax-free
+                      growth on qualified withdrawals.
+                    </li>
+                    <li>
+                      <strong style="color: var(--text-main-light)"
+                        >Diversification beyond public markets.</strong
+                      >
+                      Most retirement accounts are concentrated in publicly
+                      traded stocks, bonds, and mutual funds. A private placement
+                      gives your retirement portfolio exposure to early-stage
+                      healthcare development that does not move in lockstep with
+                      public market cycles.
+                    </li>
+                    <li>
+                      <strong style="color: var(--text-main-light)"
+                        >A long-term horizon that aligns with private
+                        investing.</strong
+                      >
+                      Retirement accounts are designed to be held for years or
+                      decades. A pre-IPO private placement is also illiquid for
+                      an extended period. The two timelines fit together
+                      naturally.
+                    </li>
+                  </ul>
+                  <p>
+                    To invest through a retirement account, you will need a
+                    self-directed IRA custodian (such as Equity Trust, Alto, or
+                    STRATA Trust Company). Texture Capital, our broker-dealer,
+                    works with custodians familiar with this process and can help
+                    guide you through the steps. Speak with your tax advisor
+                    about whether this approach fits your retirement plan and
+                    overall financial circumstances.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="faq-list faq-panel" data-panel="company" hidden>
+            <div class="faq-item">
+              <button class="faq-q">
+                How did an ancient Mediterranean remedy end up in a Kansas
+                laboratory?<span class="pm">+</span>
+              </button>
+              <div class="faq-a">
+                <div class="faq-a-inner">
+                  <p>
+                    NextGen's founder and chief scientist, Gene Zaid, was born
+                    just outside Jerusalem and grew up watching family members
+                    use the black calla lily, scientifically known as
+                    <em>Arum palaestinum</em>, as a traditional remedy. The plant
+                    has been documented in Middle Eastern medical literature
+                    since the 9th century AD.
+                  </p>
+                  <p>
+                    Zaid moved to the United States in 1969, eventually built a
+                    chemistry company called Jacam Chemicals in Sterling, Kansas,
+                    and sold it to CES Energy Solutions in 2013 for ~$300
+                    million. He used the proceeds to do what he had been thinking
+                    about for decades: apply modern medicinal chemistry to a
+                    plant his family had trusted for generations.
+                  </p>
+                  <p>
+                    Selling the black calla lily in the U.S. food supply required
+                    engaging directly with the FDA. NextGen completed New Dietary
+                    Ingredient notifications for both <em>Arum palaestinum</em>
+                    and <em>Peganum harmala</em>, a multi-year regulatory process
+                    involving safety studies and data submission. To the
+                    company's knowledge, it is the only entity in the United
+                    States with both notifications cleared.
+                  </p>
+                  <p>
+                    Today, NextGen grows the plant in six greenhouses in the same
+                    small-town Kansas community where Jacam was built, and
+                    operates its drug and supplement programs from there.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-q">
+                What did Genzada Pharmaceutical's Phase 1 trial show, and what
+                does it mean for the road ahead?<span class="pm">+</span>
+              </button>
+              <div class="faq-a">
+                <div class="faq-a-inner">
+                  <p>
+                    The Phase 1 trial of GZ17-6.02 enrolled patients with
+                    advanced solid tumors and lymphoma, all of whom had already
+                    failed multiple prior therapies. The results, published in
+                    <em>Annals of Oncology</em> in 2021, showed biological
+                    activity across eight tumor types and no Grade 4 or Grade 5
+                    adverse events across the patient sample.
+                  </p>
+                  <p>
+                    One non-small cell lung cancer patient saw measurable tumor
+                    shrinkage. Several other patients experienced stable disease,
+                    which in late-stage cancer is considered a meaningful
+                    clinical result. Company data indicates tumor regression of
+                    up to 34 percent in some cases and a 23.5 percent overall
+                    clinical benefit rate, compared with 15 to 20 percent for
+                    currently available treatments.
+                  </p>
+                  <p>
+                    GZ17-6.02 completed FDA Phase 1 with zero serious adverse
+                    events across eight tumor types, and the compound has now
+                    moved into an investigator-initiated Phase 1B trial at
+                    Virginia Commonwealth University, where researchers are
+                    testing it in patients with advanced prostate cancer.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-q">
+                Why does NextGen fund both a pharmaceutical company and a
+                supplement business?<span class="pm">+</span>
+              </button>
+              <div class="faq-a">
+                <div class="faq-a-inner">
+                  <p>
+                    The two businesses are built on the same plant but operate
+                    under distinct regulatory frameworks. The clinical pipeline
+                    targets cancer through FDA-regulated drug trials, where the
+                    timeline to commercialization typically spans a decade or
+                    more. The supplement line, sold through Hyatt Life Sciences,
+                    generates revenue now and provides direct customer feedback
+                    on the underlying science.
+                  </p>
+                  <p>
+                    Running both creates a real floor under the company: if the
+                    drug program faces delays, the supplement business continues
+                    to bring in cash and build the brand. It also reduces
+                    dependence on dilutive financing rounds tied to clinical
+                    milestones, which matters in tight capital markets.
+                  </p>
+                  <p>
+                    The supplement business is patented, FDA-cleared for its key
+                    ingredients, and already distributed through both Walmart.com
+                    and the company's own e-commerce site.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-q">
+                What does the leadership team bring from their last company,
+                Jacam Chemical?<span class="pm">+</span>
+              </button>
+              <div class="faq-a">
+                <div class="faq-a-inner">
+                  <p>
+                    Gene Zaid founded Jacam Chemical in his garage in Sterling,
+                    Kansas in 1982. Jason West joined as president in 2009 and
+                    led the company through 430 percent revenue growth before its
+                    sale to CES Energy Solutions in 2013 for ~$300 million.
+                  </p>
+                  <p>
+                    The same two people are now driving NextGen. They bring
+                    hands-on experience scaling a complex chemistry-focused
+                    business, navigating a successful exit, and operating from
+                    rural Kansas with global ambitions.
+                  </p>
+                  <p>
+                    The team's pharmaceutical capabilities are reinforced by
+                    Stefan Proniuk, PhD, MBA, Chief Science Officer with
+                    leadership roles previously at Neuraptive, Arno Therapeutics,
+                    Neurocrine Biosciences, and Cima Labs, and by Cameron West,
+                    MD, MBA, COO and practicing dermatologist trained at the
+                    University of Kansas School of Medicine.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-q">
+                How is investor capital being put to work?<span class="pm"
+                  >+</span
+                >
+              </button>
+              <div class="faq-a">
+                <div class="faq-a-inner">
+                  <p>
+                    The current $10 million Regulation D offering funds the next
+                    phase of development across both pathways. Capital is
+                    allocated:
+                  </p>
+                  <ul>
+                    <li>
+                      48 percent to GZ17-6.02 research and preclinical work for
+                      the cancer program
+                    </li>
+                    <li>20 percent to research on the topical GZ21T compound</li>
+                    <li>13 percent to new pipeline development</li>
+                    <li>9 percent to manufacturing capacity</li>
+                    <li>
+                      5 percent to marketing and advertising for the supplement
+                      business
+                    </li>
+                    <li>5 percent to general and administrative expenses</li>
+                  </ul>
+                  <p>
+                    NextGen Scientific and affiliates have raised approximately
+                    $75 million to date, supporting active clinical programs
+                    targeting cancer and dermatological conditions while scaling
+                    a portfolio of science-backed supplements already generating
+                    revenue.
+                  </p>
                 </div>
               </div>
             </div>
@@ -4746,6 +5046,28 @@
               item.classList.add("open");
               answer.style.maxHeight = answer.scrollHeight + "px";
             }
+          });
+        });
+
+        // 4b. FAQ Category Toggle (Investor / Company)
+        const faqTabs = document.querySelectorAll(".faq-tab");
+        const faqPanels = document.querySelectorAll(".faq-panel");
+        faqTabs.forEach((tab) => {
+          tab.addEventListener("click", () => {
+            const target = tab.dataset.tab;
+            faqTabs.forEach((t) => {
+              const on = t === tab;
+              t.classList.toggle("active", on);
+              t.setAttribute("aria-selected", on ? "true" : "false");
+            });
+            faqPanels.forEach((p) => {
+              p.hidden = p.dataset.panel !== target;
+            });
+            // collapse any open item when switching categories
+            document.querySelectorAll(".faq-item.open").forEach((i) => {
+              i.classList.remove("open");
+              i.querySelector(".faq-a").style.maxHeight = null;
+            });
           });
         });
 
