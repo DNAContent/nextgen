@@ -1927,6 +1927,14 @@
       .refs li {
         padding: 4px 0;
       }
+      .refs a {
+        color: var(--brand-plum-light);
+        text-decoration: underline;
+        text-underline-offset: 2px;
+      }
+      .refs a:hover {
+        color: #fff;
+      }
 
       .disc {
         border-top: 1px solid var(--border-dark);
@@ -3325,41 +3333,49 @@
         <div class="wrap">
           <div class="sec-head reveal">
             <span class="eyebrow on-dark">The Need</span>
-            <h2>Hard cancers still have too few answers.</h2>
+            <h2>Hardest to treat is where the fewest options exist.</h2>
             <p class="lede">
-              The tumor types this program goes after are among the toughest to
-              treat, which is exactly where the demand for new options runs
-              highest.
+              By the time a cancer has beaten every standard therapy, most
+              patients and their families are out of road. Those are the tumors
+              this program goes after, and they are the ones where a single added
+              option can change everything. The need behind them is enormous, and
+              it keeps growing.
             </p>
           </div>
           <div class="prob-grid">
             <div class="prob reveal">
-              <div class="n" data-count="2" data-suffix="M+">0</div>
-              <div class="t">New U.S. cancer cases a year</div>
-              <div class="d">
-                Demand for treatment keeps climbing as the population ages.
+              <div class="n">
+                <span data-count="20">0</span>
+                <span style="font-size: 26px">million</span>
               </div>
-              <div class="src">American Cancer Society (2024 est.)</div>
+              <div class="d" style="margin-top: 16px">
+                New cancer cases worldwide every year, a figure climbing toward
+                35 million by 2050 as populations grow and age.
+              </div>
+              <div class="src">IARC / WHO, GLOBOCAN 2022<sup class="fn"><a href="#ref6">6</a></sup></div>
             </div>
             <div class="prob reveal delay-1">
-              <div class="n" data-count="600" data-suffix="K+">0</div>
-              <div class="t">U.S. cancer deaths a year</div>
-              <div class="d">
-                Survival stays low for several of the tumor types in the
-                pipeline.
+              <div class="n">
+                <span data-count="9.7" data-decimals="1">0</span>
+                <span style="font-size: 26px">million</span>
               </div>
-              <div class="src">American Cancer Society (2024 est.)</div>
+              <div class="d" style="margin-top: 16px">
+                Cancer deaths worldwide every year. For several tumor types in
+                this pipeline, survival has barely moved in decades.
+              </div>
+              <div class="src">IARC / WHO, GLOBOCAN 2022<sup class="fn"><a href="#ref6">6</a></sup></div>
             </div>
             <div class="prob reveal delay-2">
-              <div class="n" data-prefix="$" data-count="400" data-suffix="B+">
-                0
+              <div class="n">
+                <span data-prefix="$" data-count="252">0</span>
+                <span style="font-size: 26px">billion</span>
               </div>
-              <div class="t">Global oncology spend by 2035</div>
-              <div class="d">
-                Oncology drug spending is projected to climb from roughly $192B
-                in 2025 to over $400B by 2035.
+              <div class="d" style="margin-top: 16px">
+                Global spending on cancer medicines in 2024, on track to reach
+                $441 billion by 2029. This is a market that pays for therapies
+                able to reach targets others miss.
               </div>
-              <div class="src">Nova One Advisor</div>
+              <div class="src">IQVIA Institute, Global Use of Medicines 2025<sup class="fn"><a href="#ref7">7</a></sup></div>
             </div>
           </div>
           <p
@@ -3373,9 +3389,10 @@
               margin-inline: auto;
             "
           >
-            NextGen comes at this from a different starting point: a compound
-            drawn from a plant with centuries of folk use, advanced through
-            modern trials, and held by a patent portfolio that runs to 2038.
+            NextGen starts somewhere unusual. Its lead compound traces back to a
+            plant that families near Jerusalem have brewed against illness since
+            the ninth century, carried forward now through modern clinical trials
+            and its uses protected by a patent portfolio that runs to 2038.
           </p>
         </div>
       </section>
@@ -5770,6 +5787,27 @@
             ~$300M Jacam exit: company materials state ~$300M (2013, CES Energy
             Solutions); the appellate court record cites $240M for the asset
             purchase. Choose a defensible figure and source it.
+          </li>
+          <li id="ref6">
+            Global cancer incidence (20 million new cases a year, climbing
+            toward 35 million by 2050) and mortality (9.7 million deaths a year):
+            IARC / WHO, GLOBOCAN 2022 —
+            <a
+              href="https://www.researchgate.net/publication/379571386_Global_cancer_statistics_2022_GLOBOCAN_estimates_of_incidence_and_mortality_worldwide_for_36_cancers_in_185_countries"
+              target="_blank"
+              rel="noopener"
+              >Bray et al., Global cancer statistics 2022</a
+            >.
+          </li>
+          <li id="ref7">
+            Global spending on cancer medicines ($252 billion in 2024, on track
+            to reach $441 billion by 2029): IQVIA Institute —
+            <a
+              href="https://www.iqvia.com/-/media/iqvia/pdfs/events/presentation_global-meds-webinar_public.pdf"
+              target="_blank"
+              rel="noopener"
+              >Global Use of Medicines 2025</a
+            >.
           </li>
         </ol>
       </div>
